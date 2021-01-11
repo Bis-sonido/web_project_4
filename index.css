@@ -235,13 +235,10 @@
   line-height: 29px;
   color: #000000;
 }
-.group__title:nth-of-type(4){
-  margin: 25px auto 32px 15px;
-}
 .group{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .group__button{
   background-color: white;
@@ -252,6 +249,16 @@
 .group__button:hover{
   cursor: pointer;
   opacity: 50%;
+}
+.group__button:active{
+  background-image: url(images/heart-union.png);
+  background-repeat: no-repeat;
+  
+}
+.group__button:focus{
+  background-image: url(images/heart-union.png);
+  outline: none;
+  background-repeat: no-repeat;
 }
 
 .group__image{
