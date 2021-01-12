@@ -7,3 +7,6 @@
   line-height: 17px;
   border: 0;
 }
+.field-about__box:focus{
+  outline: none;
+}
