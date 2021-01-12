@@ -34,7 +34,7 @@ copyright text.
 
 Javascript was used to display a form that would show by clicking a button in the profile section. Variables were created to accomodate certain events by "click". 
 
-# Two functions were created:
+### Two functions were created:
 
 * formSubmit - to change the values of the field-name and field-about.
 * togglePopup - to enable the edit button to display or close the form.
