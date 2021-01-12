@@ -11,6 +11,7 @@
 * Footer
 
 **Header**
+
 Simple svg. file as the logo with a solid line underneath it for a sense of separation on the black-background page.
 
 **Profile**
@@ -23,12 +24,17 @@ The form block is controlled, in terms of display, by using a bit of javascript 
 
 **Elements**
 
+list of of 6 places around U.S composed of a background color, an image of the place, title of the place, and a heart icon that changes color when is clicked upon. the change of color is accomplished by the use of selectors by changing the image to a similar one.
 
+**footer**
 
-* [Link to the project in Figma](https://www.figma.com/file/mUgu8OSHWE0M6p6vfwmdu9/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
+copyright text.
 
-**Images**
+### Java
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
+Javascript was used to display a form that would show by clicking a button in the profile section. Variables were created to accomodate certain events by "click". 
 
-Have fun with JavaScript!
+# Two functions were created:
+
+* formSubmit - to change the values of the field-name and field-about.
+* togglePopup - to enable the edit button to display or close the form.
