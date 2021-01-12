@@ -1,4 +1,4 @@
-.page{
+/*.page{
   background-color: #000000;
 }
 .popup{
@@ -16,7 +16,7 @@
 .popup_open{
   display: flex;
 }
-.popup__container{
+/*.popup__container{
   width: 430px;
   display: flex;
   flex-direction: column;

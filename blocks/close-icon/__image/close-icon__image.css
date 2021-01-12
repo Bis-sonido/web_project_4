@@ -1,0 +1,13 @@
+.close-icon__image{
+  display: flex;
+  width: 40px;
+  height: 40px;
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 320px){
+  .close-icon__image{
+    width: 26px;
+    height: 26px;
+  }
+}

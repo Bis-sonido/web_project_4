@@ -1,0 +1,21 @@
+@import url(__image/add-button__image.css);
+
+.add-button{
+  margin: 35px 0;
+  width: 150px;
+  max-height: 50px;
+  background-color: black;
+  padding: 0;
+  border: 2px solid #ffffff;
+}
+.add-button:hover{
+  cursor: pointer;
+  opacity: 60%;
+}
+
+@media screen and (max-width: 320px){
+  .add-button{
+    width: 282px;
+    margin: 0 auto 36px auto;
+  }
+}

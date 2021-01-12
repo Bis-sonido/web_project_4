@@ -1,0 +1,16 @@
+.avatar{
+  width: 120px;
+  height: 120px;
+  background-image: url(../../images/Jacques.png);
+  object-fit: contain;
+  border-radius: 50%;
+  margin-right: 30px
+}
+
+@media screen and (max-width: 320px){
+  .avatar{
+    width: 120px;
+    height: 120px;
+    margin: 28px auto 30px auto;
+  }
+}

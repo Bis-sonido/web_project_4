@@ -1,0 +1,12 @@
+.add-button__image{
+  width: 22px;
+  height: 22px;
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 320px){
+  .add-button__image{
+    width: 16px;
+    height: 16px;
+  }
+}

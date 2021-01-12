@@ -1,0 +1,14 @@
+@import url(__box/field-about__box.css);
+@import url(__line/field-about__line.css);
+
+.field-about{
+  width: 358px;
+  margin: 0 auto;
+  font-family: 'inter', 'arial', 'sans-serif';
+}
+
+@media screen and (max-width: 320px){
+  .field-about{
+    max-width: 238px;
+  }
+}

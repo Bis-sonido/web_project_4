@@ -1,0 +1,23 @@
+.edit{
+  width: 24px;
+  height: 24px;
+  background: #000000;
+  border: 1px solid #ffffff;
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+.edit:hover{
+  cursor: pointer;
+  opacity: 60%;
+}
+@media screen and (max-width: 320px){
+  .edit{
+    padding: 0;
+    top: 4px;
+    right: 15px;
+    bottom: 28px;
+    width: 18px;
+    height: 18px;
+  }
+}

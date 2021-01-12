@@ -1,0 +1,14 @@
+@import url(__box/field-name__box.css);
+@import url(__line/field-name__line.css);
+
+.field-name{
+  width: 358px;
+  margin: 0 auto 30px auto;
+  font-family: 'inter', 'arial', 'sans-serif';
+}
+
+@media screen and (max-width: 320px){
+  .field-name{
+    max-width: 238px;
+  }
+}

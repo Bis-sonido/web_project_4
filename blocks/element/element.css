@@ -1,0 +1,7 @@
+@import url(__images/element__images.css);
+
+.element{
+  max-width: 282px;
+  background-color: white;
+  border-radius: 10px;
+}
