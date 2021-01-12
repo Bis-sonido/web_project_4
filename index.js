@@ -1,12 +1,12 @@
-const editButton = document.querySelector(".edit");
-const closeButton = document.querySelector(".close-icon");
-const formElement = document.querySelector(".form");
+let editButton = document.querySelector(".edit");
+let closeButton = document.querySelector(".close-icon");
+let formElement = document.querySelector(".form");
 
-const fieldName = document.querySelector(".field-name__box");
-const fieldAbout = document.querySelector(".field-about__box");
+let fieldName = document.querySelector(".field-name__box");
+let fieldAbout = document.querySelector(".field-about__box");
 
-const profileTitle = document.querySelector(".profile-info__title");
-const profileSubtitle = document.querySelector(".profile-info__subtitle");
+let profileTitle = document.querySelector(".profile-info__title");
+let profileSubtitle = document.querySelector(".profile-info__subtitle");
 
 function handleFormSubmit (evt){
   evt.preventDefault();
@@ -15,7 +15,7 @@ function handleFormSubmit (evt){
   profileSubtitle.textContent = fieldAbout.value;
 }
 function togglePopup() {
-  const popup = document.querySelector(".popup");
+  let popup = document.querySelector(".popup");
   popup.classList.toggle("popup_open");
 
 }
