@@ -1,6 +1,5 @@
 .profile-info__title{
   color: white;
-  font-family: Inter;
   font-style: normal;
   font-weight: 500;
   font-size: 42px;
@@ -8,7 +7,7 @@
   margin: 0 0 16px 0;
 }
 
-@media screen and (max-width: 320px){
+@media screen and (min-width: 320px) and (max-width: 992px) {
   .profile-info__title{
     font-size: 22px;
     line-height: 27px;

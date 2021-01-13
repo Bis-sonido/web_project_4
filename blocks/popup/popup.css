@@ -1,5 +1,5 @@
-@import url(__container/popup__container.css);
-
+@import url(./_open/popup_open.css);
+@import url(./__container/popup__container.css);
 
 .popup{
   z-index: 2;
@@ -13,8 +13,4 @@
   justify-content: center;
   align-items: center;
 }
-.popup_open{
-  display: flex;
-}
 
-@import url(_open/popup_open.css);

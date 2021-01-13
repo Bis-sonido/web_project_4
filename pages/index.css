@@ -1,6 +1,7 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts/inter.css);
 @import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/_open/popup_open.css);
 @import url(../blocks/add-button/add-button.css);
 @import url(../blocks/avatar/avatar.css);
 @import url(../blocks/close-icon/close-icon.css);

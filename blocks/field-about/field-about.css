@@ -1,13 +1,20 @@
-@import url(__box/field-about__box.css);
-@import url(__line/field-about__line.css);
 
 .field-about{
+  display: block;
   width: 358px;
-  margin: 0 auto;
+  margin: 0 auto 29px auto;
   font-family: 'inter', 'arial', 'sans-serif';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  border: 0;
+  padding: 0 0 13px 0;
+  border-bottom: 1px solid #00000020;
+  outline: none;
 }
 
-@media screen and (max-width: 320px){
+@media screen and (min-width: 320px) and (max-width: 992px){
   .field-about{
     max-width: 238px;
   }

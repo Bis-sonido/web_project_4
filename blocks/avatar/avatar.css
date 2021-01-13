@@ -7,10 +7,8 @@
   margin-right: 30px;
 }
 
-@media screen and (max-width: 320px){
+@media screen and (min-width: 320px) and (max-width: 992px){
   .avatar{
-    width: 120px;
-    height: 120px;
     margin: 28px auto 30px auto;
   }
 }

@@ -1,10 +1,10 @@
-@import url(__button/group__button.css);
-@import url(__image/group__image.css);
-@import url(__title/group__title.css);
+@import url(./__button/group__button.css);
+@import url(./__image/group__image.css);
+@import url(./__title/group__title.css);
 
 .group{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-family: 'inter', 'arial', 'sans-serif';
+  font-family: 'Inter', 'Arial', 'sans-serif';
 }

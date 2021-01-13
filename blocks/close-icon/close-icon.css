@@ -1,26 +1,26 @@
-@import url(__image/close-icon__image.css);
+@import url(./__image/close-icon__image.css);
 
 .close-icon{
   z-index: 3;
   position: absolute;
-  left: 66.15%;
-  right: 30.73%;
-  top: 17%;
+  right: 430px;
+  top: 110px;
   padding: 0;
   background-color: #00000000;
   border: 0 black;
   transform: rotate(-45deg);
+  transition: 0.3s ease-in-out;
 }
 .close-icon:hover{
   cursor: pointer;
   opacity: 60%;
 }
 
-@media screen and (max-width: 320px){
+@media screen and (min-width: 320px) and (max-width: 992px) {
   .close-icon{
     width: 26px;
     height: 26px;
-    position: absolute;
-    left: 88%;
+    right: 20px;
+    top: 130px;
   }
 }

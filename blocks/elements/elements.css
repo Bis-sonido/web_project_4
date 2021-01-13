@@ -1,15 +1,1 @@
-.elements{
-  margin: 51px auto 67px auto;
-  max-width: 880px;
-  display: grid;
-  grid-gap: 20px 16px;
-  padding: 0;
-  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
-  list-style-type: none;
-}
-
-@media screen and (max-width: 320px){
-  .elements{
-    max-width: 282px;
-  }
-}
+@import url(./__cards/elements__cards.css);

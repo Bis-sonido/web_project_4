@@ -4,9 +4,8 @@
   display: flex;
 }
 
-@media screen and (max-width: 320px){
-  .profile{
-    max-width: 282px;
+@media screen and (min-width: 320px) and (max-width: 992px){
+ .profile{
     flex-direction: column;
     align-items: center;
   }

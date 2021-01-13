@@ -2,8 +2,8 @@ let editButton = document.querySelector(".edit");
 let closeButton = document.querySelector(".close-icon");
 let formElement = document.querySelector(".form");
 
-let fieldName = document.querySelector(".field-name__box");
-let fieldAbout = document.querySelector(".field-about__box");
+let fieldName = document.querySelector(".field-name");
+let fieldAbout = document.querySelector(".field-about");
 
 let profileTitle = document.querySelector(".profile-info__title");
 let profileSubtitle = document.querySelector(".profile-info__subtitle");
