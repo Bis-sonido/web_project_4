@@ -3,8 +3,8 @@
 .close-icon{
   z-index: 3;
   position: absolute;
-  right: 430px;
-  top: 110px;
+  right: -35px;
+  top: -35px;
   padding: 0;
   background-color: #00000000;
   border: 0 black;
@@ -20,7 +20,7 @@
   .close-icon{
     width: 26px;
     height: 26px;
-    right: 20px;
-    top: 130px;
+    right: -5px;
+    top: -30px;
   }
 }

@@ -30,7 +30,7 @@ list of of 6 places around U.S composed of a background color, an image of the p
 
 copyright text.
 
-### Java
+### JavaScript
 
 Javascript was used to display a form that would show by clicking a button in the profile section. Variables were created to accomodate certain events by "click". 
 

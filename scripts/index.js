@@ -2,6 +2,8 @@ let editButton = document.querySelector(".edit");
 let closeButton = document.querySelector(".close-icon");
 let formElement = document.querySelector(".form");
 
+let popup = document.querySelector(".popup");
+
 let fieldName = document.querySelector(".field-name");
 let fieldAbout = document.querySelector(".field-about");
 
@@ -13,12 +15,20 @@ function handleFormSubmit (evt){
 
   profileTitle.textContent = fieldName.value;
   profileSubtitle.textContent = fieldAbout.value;
+
+  togglePopup()
 }
+
 function togglePopup() {
-  let popup = document.querySelector(".popup");
   popup.classList.toggle("popup_open");
 
+    if ("popup_open") {
+      fieldName.value = profileTitle.textContent;
+      fieldAbout.value = profileSubtitle.textContent;
+    //added after review #1//
+    };
 }
+
 formElement.addEventListener("submit", handleFormSubmit);
 
 editButton.addEventListener("click", togglePopup)
