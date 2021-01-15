@@ -2,13 +2,14 @@
 @import url(./__title/profile-info__title.css);
 
 .profile-info{
-  width: 450px;
+  width: 415px;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-self: center;
   margin-right: 165px;
-  font-family: 'Arial', 'Inter', 'sans-serif';
+  font-family: 'Inter', 'Arial', 'sans-serif';
 }
 
 @media screen and (min-width: 320px) and (max-width: 992px){

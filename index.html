@@ -9,17 +9,17 @@
 <body class="page">
   <header class="header">
     <img src="images/Vector-logo.svg" alt="Vector-logo" class="header__vector">
-    <div class="header__line"></div>
   </header>
   <main class="main">
     <section class="profile">
       <div class="avatar"></div>
       <div class="profile-info">
         <h1 class="profile-info__title">Jacques Cousteau</h1>
-        <p class="profile-info__subtitle">Explorer</p>
         <button class="edit" type="button">
           <img src="images/Vector-pen.svg" alt="pen" class="edit__image">
         </button>
+        <p class="profile-info__subtitle">Explorer</p>
+        
       </div>
       <button class="add-button" type="button">
         <img src="images/Close-Icon.svg" alt="add-button" class="add-button__image">
@@ -90,12 +90,10 @@
   </footer>
   <div class="popup">
     <div class="popup__container">
-      <form action="#" class="form" name="edit-profile" method="GET">
+      <form action="#" class="form" name="edit-profile" method="POST">
         <h3 class="form__edit-profile">Edit profile</h3>
-          <label for="name"></label>
-          <input type="text" name="name" placeholder="Jacques Cousteau" class="field-name">
-          <label for="about"></label>
-          <input type="text" name="about" placeholder="Explorer"  class="field-about">
+          <input type="text" name="name" placeholder="Name" class="field-name">
+          <input type="text" name="about" placeholder="About me"  class="field-about">
         <button class="form__submit-button" type="submit">
           Save
         </button>

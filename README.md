@@ -1,6 +1,12 @@
 # Project 4: Around The U.S.
 
 * [Link to project](https://bis-sonido.github.io/web_project_4/)
+### Techologies
+
+* HTML5
+* CSS3
+* JavaScript
+* Git
 
 ### Overview
 

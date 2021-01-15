@@ -3,9 +3,7 @@
   height: 24px;
   background: #000000;
   border: 1px solid #ffffff;
-  position: absolute;
-  top: 15px;
-  right: 0;
+  margin: 15px 0 38px 18px;
   transition: 0.3s ease-in-out;
 }
 .edit:hover{

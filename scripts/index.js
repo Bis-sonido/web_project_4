@@ -16,17 +16,17 @@ function handleFormSubmit (evt){
   profileTitle.textContent = fieldName.value;
   profileSubtitle.textContent = fieldAbout.value;
 
-  togglePopup()
+  togglePopup();
 }
 
 function togglePopup() {
-  popup.classList.toggle("popup_open");
 
-    if ("popup_open") {
+    if (!popup.classList.contains('popup_open')) {
       fieldName.value = profileTitle.textContent;
       fieldAbout.value = profileSubtitle.textContent;
     //added after review #1//
-    };
+    }
+    popup.classList.toggle("popup_open");
 }
 
 formElement.addEventListener("submit", handleFormSubmit);
