@@ -13,10 +13,6 @@
 @media screen and (min-width: 320px) and (max-width: 992px) {
   .edit{
     padding: 0;
-    top: 4px;
-    right: 15px;
-    bottom: 28px;
-    width: 18px;
-    height: 18px;
+    margin: 4px 15px 14px 10px;
   }
 }

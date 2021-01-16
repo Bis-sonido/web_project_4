@@ -1,15 +1,17 @@
-@import url(./__image/close-icon__image.css);
-
 .close-icon{
   z-index: 3;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  right: -35px;
-  top: -35px;
+  right: -40px;
+  top: -40px;
   padding: 0;
   background-color: #00000000;
   border: 0 black;
-  transform: rotate(-45deg);
   transition: 0.3s ease-in-out;
+  background-image: url(../../images/Close-Icon.svg);
+  background-position: center;
+  outline: none;
 }
 .close-icon:hover{
   cursor: pointer;
@@ -20,7 +22,8 @@
   .close-icon{
     width: 26px;
     height: 26px;
-    right: 0px;
-    top: -35px;
+    top: -50px;
+    right: 10px;
+    
   }
 }
