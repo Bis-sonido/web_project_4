@@ -27,60 +27,7 @@
     </section>
     <section class="elements">
       <ul class="elements__cards">
-        <li class="element">
-          <img src="images/Yosemite-Valley.png" alt="Yosemite" class="element__images">
-          <div class="group">
-            <h2 class="group__title">Yosemite Valley</h2>
-            <button class="group__button" type="button">
-              <img src="images/Vector-heart.png" alt="like" class="group__image">
-            </button>
-          </div>
-        </li>
-        <li class="element">
-          <img src="images/Lake-Louise.png" alt="Lake-Louise" class="element__images">
-          <div class="group">
-            <h2 class="group__title">Lake Louise</h2>
-            <button class="group__button" type="button">
-              <img src="images/Vector-heart.png" alt="like" class="group__image">
-            </button>
-          </div>
-        </li>
-        <li class="element">
-          <img src="images/Bald-Mountains.png" alt="bald-mountians" class="element__images">
-          <div class="group">
-            <h2 class="group__title">Bald Mountains</h2>
-            <button class="group__button" type="button">
-              <img src="images/Vector-heart.png" alt="like" class="group__image">
-            </button>
-          </div>
-        </li>
-        <li class="element">
-          <img src="images/Later.png" alt="Latemar" class="element__images">
-          <div class="group">
-            <h2 class="group__title">Latemar</h2>
-            <button class="group__button" type="button">
-              <img src="images/Vector-heart.png" alt="like" class="group__image">
-            </button>
-          </div>
-        </li>
-        <li class="element">
-          <img src="images/Vanoise-National.png" alt="vanoise" class="element__images">
-          <div class="group">
-            <h2 class="group__title">Vanoise National Park</h2>
-            <button class="group__button" type="button">
-              <img src="images/Vector-heart.png" alt="like" class="group__image">
-            </button>
-          </div>
-        </li>
-        <li class="element">
-          <img src="images/Lago-di-Braies.png" alt="lago-di-braies" class="element__images">
-          <div class="group">
-            <h2 class="group__title">Lago di Braises</h2>
-            <button class="group__button" type="button">
-              <img src="images/Vector-heart.png" alt="like" class="group__image">
-            </button>
-          </div>
-        </li>
+        
       </ul>
     </section>
     
@@ -88,7 +35,7 @@
   <footer class="footer">
     <p class="footer__copyright">&copy; 2020 Around The U.S.</p>
   </footer>
-  <div class="popup">
+  <div class="popup popup_type_edit-profile">
     <div class="popup__container">
       <form action="#" class="form" name="edit-profile" method="POST">
         <h3 class="form__edit-profile">Edit profile</h3>
@@ -101,6 +48,44 @@
       <button class="close-icon" type="button"></button>
     </div> 
   </div>
+
+  <div class="popup popup_type_create-card">
+    <div class="popup__container">
+      <form action="#" class="form form_type_card-input" name="create-card" method="POST">
+        <h3 class="form__edit-profile">New Place</h3>
+          <input type="text" name="name" placeholder="Title" class="field-name field-name_type_card-title">
+          <input type="url" name="about" placeholder="Image link"  class="field-about field-about_type_url">
+        <button class="form__submit-button" type="submit">
+          Create
+        </button>
+      </form>
+      <button class="close-icon close-icon_type_close-card" type="button"></button>
+    </div> 
+  </div>
+
+  <div class="popup popup_type_figure-card">
+    <div class="popup__container popup__container_type_figure">
+      <figure class="popup__figure">
+        <img class="popup__figure-image" src="" alt="">
+        <figcaption class="popup__figure-title"></figcaption>
+        <button class="close-icon close-icon_type_figure-image" type="button"></button>
+      </figure>
+    </div> 
+  </div>
+
+  <template class="card-template">
+    <li class="element">
+      <button type="button" class="element__remove"></button>
+      <img src="" alt="Yosemite" class="element__images">
+      <div class="group">
+        <h2 class="group__title"></h2>
+        <button class="group__button" type="button">
+          <img src="images/Vector-heart.png" alt="like" class="group__image">
+        </button>
+      </div>
+    </li>
+  </template>
+
   <script src="scripts/index.js"></script>
 </body>
 </html>

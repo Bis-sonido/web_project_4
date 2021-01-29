@@ -1,0 +1,7 @@
+.group__button_like{
+  background-image: url(../../../../images/heart-union.png);
+  background-repeat: no-repeat;
+}
+.group__button_like:focus{
+  outline: none;
+}
