@@ -86,6 +86,26 @@ function addCardSubmit (evt) {
     let likeExtraCards = cardLikeButton.classList.toggle("group__button_like");
 
   });
+
+  cardDeleteButton.addEventListener("click", () =>{
+
+    let removeExtraCards = document.querySelector(".element");
+
+    removeExtraCards.remove();
+
+  });
+
+  cardImage.addEventListener("click", () => {
+    //popup-figure-on-click
+    let figureExtraImages = document.querySelector(".popup__figure-image");
+    let figureExtraTitles = document.querySelector(".popup__figure-title");
+
+    figureExtraImages.src;
+    figureExtraTitles.name;
+
+    togglePopup(openFigureButton);
+  });
+
 };
 
 
