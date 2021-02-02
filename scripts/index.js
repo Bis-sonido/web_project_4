@@ -64,30 +64,30 @@ function addCardSubmit (evt) {
   //add-extra-cards
   evt.preventDefault();
 
-  let cardElement = cardTemplate.cloneNode(true);
+  let cardFormElement = cardTemplate.cloneNode(true);
 
-  let cardImage = cardElement.querySelector(".element__images");
-  let cardTitle = cardElement.querySelector(".group__title");
-  let cardBox = cardElement.querySelector(".group");
-  let cardLikeButton = cardElement.querySelector(".group__button");
-  let cardGroupImage = cardElement.querySelector(".group__image");
-  let cardDeleteButton = cardElement.querySelector(".element__remove");
+  let cardFormImage = cardFormElement.querySelector(".element__images");
+  let cardFormTitle = cardFormElement.querySelector(".group__title");
+  let cardFormBox = cardFormElement.querySelector(".group");
+  let cardFormLikeButton = cardFormElement.querySelector(".group__button");
+  let cardFormGroupImage = cardFormElement.querySelector(".group__image");
+  let cardFormDeleteButton = cardFormElement.querySelector(".element__remove");
 
 
-  cardTitle.textContent = cardCreateName.value;
-  cardImage.src = cardUrlLink.value;
+  cardFormTitle.textContent = cardCreateName.value;
+  cardFormImage.src = cardUrlLink.value;
 
-  list.prepend(cardElement);
+  list.prepend(cardFormElement);
 
   togglePopup(addCardPopup);
 
-  cardLikeButton.addEventListener("click", () =>{
+  cardFormLikeButton.addEventListener("click", () =>{
 
-    let likeExtraCards = cardLikeButton.classList.toggle("group__button_like");
+    let likeExtraCards = cardFormLikeButton.classList.toggle("group__button_like");
 
   });
 
-  cardDeleteButton.addEventListener("click", () =>{
+  cardFormDeleteButton.addEventListener("click", () =>{
 
     let removeExtraCards = document.querySelector(".element");
 
@@ -95,13 +95,13 @@ function addCardSubmit (evt) {
 
   });
 
-  cardImage.addEventListener("click", () => {
+  cardFormImage.addEventListener("click", () => {
     //popup-figure-on-click
-    let figureExtraImages = document.querySelector(".popup__figure-image");
-    let figureExtraTitles = document.querySelector(".popup__figure-title");
+    let figureExtraImages = openFigureButton.querySelector(".popup__figure-image");
+    let figureExtraTitles = openFigureButton.querySelector(".popup__figure-title");
 
-    figureExtraImages.src;
-    figureExtraTitles.name;
+    figureExtraImages.src = cardFormImage.src;
+    figureExtraTitles.textContent = cardFormTitle.textContent;
 
     togglePopup(openFigureButton);
   });
