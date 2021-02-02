@@ -147,6 +147,7 @@ initialCards.forEach(data => {
   
   cardTitle.textContent = data.name;
   cardImage.src = data.link;
+  cardImage.alt = data.name;
 
   cardImage.addEventListener("click", () => {
     //popup-figure-on-click
