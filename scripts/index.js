@@ -130,7 +130,6 @@ function handleFormSubmit (evt){
 
 function togglePopup(modal) {
       //toggle-popups
-    profileValues();
     modal.classList.toggle('popup_open');
 }
 
@@ -140,6 +139,8 @@ function profileValues (){
     fieldAbout.value = profileSubtitle.textContent;
   }
 }
+
+profileValues(togglePopup);
 
 //Events
 formCardElement.addEventListener("submit", addCardSubmit);
@@ -152,7 +153,6 @@ closeButton.addEventListener("click", () => {
 });
 addCardButton.addEventListener('click', () => {
   togglePopup(addCardPopup)
-  addCardPopup.classList.add("popup_open");
 });
 closeCreateButton.addEventListener("click", () => {
   togglePopup(addCardPopup);
