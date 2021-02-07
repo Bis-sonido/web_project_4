@@ -138,15 +138,14 @@ function profileValues (){
     fieldName.value = profileTitle.textContent;
     fieldAbout.value = profileSubtitle.textContent;
   }
+  togglePopup(editProfileWindow);
 }
-
-profileValues(togglePopup);
 
 //Events
 formCardElement.addEventListener("submit", addCardSubmit);
 formElement.addEventListener("submit", handleFormSubmit);
 editButton.addEventListener("click", () => {
-  togglePopup(editProfileWindow);
+  profileValues();
 });
 closeButton.addEventListener("click", () => {
   togglePopup(editProfileWindow);
