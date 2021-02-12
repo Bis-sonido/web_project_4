@@ -37,7 +37,7 @@
   </footer>
   <div class="popup popup_overlay-profile popup_type_edit-profile">
     <div class="popup__container">
-      <form action="#" class="form" name="edit-profile" method="POST">
+      <form action="#" class="form" name="edit-profile" method="POST" novalidate>
         <h3 class="form__edit-profile">Edit profile</h3>
           <input id="profile-name" type="text" name="name" minlength="2" maxlength="40" placeholder="Name" class="field-name popup__input" required>
           <span id="profile-name-error" class="popup__error"></span>
@@ -55,7 +55,7 @@
 
   <div class="popup popup_overlay-card popup_type_create-card">
     <div class="popup__container">
-      <form action="#" class="form form_type_card-input" name="create-card" method="POST">
+      <form action="#" class="form form_type_card-input" name="create-card" method="POST" novalidate>
         <h3 class="form__edit-profile">New Place</h3>
           <input id="card-name" type="text" name="name"  minlength="1" maxlength="30" placeholder="Title" class="popup__input field-name field-name_type_card-title" required>
           <span id="card-name-error" class="popup__error"></span>
