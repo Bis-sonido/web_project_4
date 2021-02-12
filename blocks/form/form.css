@@ -1,5 +1,6 @@
 @import url(./__edit-profile/form__edit-profile.css);
 @import url(./__submit-button/form__submit-form.css);
+@import url(./__submit-button/_disabled/form__submit-button_disabled.css);
 
 .form{
   position: relative;

@@ -8,6 +8,11 @@ const closeButton = document.querySelector(".close-icon");
 const closeCreateButton = document.querySelector(".close-icon_type_close-card");
 const figureCloseButton = document.querySelector(".close-icon_type_figure-image");
 
+
+const overlayPopupEdit = document.querySelector(".popup_overlay-profile");
+const overlayPopupCard = document.querySelector(".popup_overlay-card");
+const overlayPopupFigure = document.querySelector(".popup_overlay-figure");
+
 //forms
 const formElement = document.querySelector(".form");
 const formCardElement = document.querySelector(".form_type_card-input");
@@ -141,6 +146,20 @@ function profileValues (){
   togglePopup(editProfileWindow);
 }
 
+function escRemove(evt){
+  const popupProfileRemove = document.querySelector(".popup_type_edit-profile");
+  const popupCardRemove = document.querySelector(".popup_type_create-card");
+  const popupFigureRemove = document.querySelector(".popup_type_figure-card");
+
+  if(evt.key === "Escape") {
+    popupProfileRemove.classList.remove("popup_open");
+    popupCardRemove.classList.remove("popup_open");
+    popupFigureRemove.classList.remove("popup_open");
+    
+  }
+   
+}
+
 //Events
 formCardElement.addEventListener("submit", addCardSubmit);
 formElement.addEventListener("submit", handleFormSubmit);
@@ -149,14 +168,33 @@ editButton.addEventListener("click", () => {
 });
 closeButton.addEventListener("click", () => {
   togglePopup(editProfileWindow);
+  
 });
 addCardButton.addEventListener('click', () => {
   togglePopup(addCardPopup)
 });
 closeCreateButton.addEventListener("click", () => {
   togglePopup(addCardPopup);
+  
 });
 figureCloseButton.addEventListener("click", () => {
   togglePopup(openFigureButton);
+  
+});
+overlayPopupEdit.addEventListener("click", (evt) => {
+  if(evt.target.classList.contains("popup_open")){
+    togglePopup(evt.target);
+  };
+});
+overlayPopupCard.addEventListener("click", (evt) => {
+  if(evt.target.classList.contains("popup_open")){
+    togglePopup(evt.target);
+  }
+});
+overlayPopupFigure.addEventListener("click", (evt) => {
+  if(evt.target.classList.contains("popup_open")){
+    togglePopup(evt.target);
+  }
 });
 
+window.addEventListener("keydown", escRemove);

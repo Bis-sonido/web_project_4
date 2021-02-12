@@ -35,12 +35,16 @@
   <footer class="footer">
     <p class="footer__copyright">&copy; 2020 Around The U.S.</p>
   </footer>
-  <div class="popup popup_type_edit-profile">
+  <div class="popup popup_overlay-profile popup_type_edit-profile">
     <div class="popup__container">
       <form action="#" class="form" name="edit-profile" method="POST">
         <h3 class="form__edit-profile">Edit profile</h3>
-          <input type="text" name="name" placeholder="Name" class="field-name" required>
-          <input type="text" name="about" placeholder="About me"  class="field-about" required>
+          <input id="profile-name" type="text" name="name" minlength="2" maxlength="40" placeholder="Name" class="field-name popup__input" required>
+          <span id="profile-name-error" class="popup__error"></span>
+
+          <input id="profile-about" type="text" name="about" minlength="2" maxlength="200"  placeholder="About me"  class="field-about popup__input" required>
+          <span id="profile-about-error" class="popup__error"></span>
+          
         <button class="form__submit-button" type="submit">
           Save
         </button>
@@ -49,12 +53,16 @@
     </div> 
   </div>
 
-  <div class="popup popup_type_create-card">
+  <div class="popup popup_overlay-card popup_type_create-card">
     <div class="popup__container">
       <form action="#" class="form form_type_card-input" name="create-card" method="POST">
         <h3 class="form__edit-profile">New Place</h3>
-          <input type="text" name="name" placeholder="Title" class="field-name field-name_type_card-title" required>
-          <input type="url" name="about" placeholder="Image link"  class="field-about field-about_type_url" required>
+          <input id="card-name" type="text" name="name"  minlength="1" maxlength="30" placeholder="Title" class="popup__input field-name field-name_type_card-title" required>
+          <span id="card-name-error" class="popup__error"></span>
+
+          <input id="card-url" type="url" name="about" placeholder="Image link"  class="popup__input field-about field-about_type_url" required>
+          <span id="card-url-error" class="popup__error"></span>
+
         <button class="form__submit-button" type="submit">
           Create
         </button>
@@ -63,7 +71,7 @@
     </div> 
   </div>
 
-  <div class="popup popup_type_figure-card">
+  <div class="popup popup_overlay-figure popup_type_figure-card">
     <div class="popup__container popup__container_type_figure">
       <figure class="popup__figure">
         <img class="popup__figure-image" src="#" alt="Places">
@@ -86,6 +94,7 @@
     </li>
   </template>
 
-  <script src="scripts/index.js"></script>
+  <script src="scripts/index.js" defer></script>
+  <script src="scripts/validate.js" defer></script>
 </body>
 </html>
