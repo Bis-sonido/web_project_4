@@ -38,33 +38,6 @@ const cardUrlLink = document.querySelector(".field-about_type_url");
 const cardTemplate = document.querySelector(".card-template").content.querySelector(".element");
 const list = document.querySelector(".elements__cards");
 
-const initialCards = [
-  {
-    name: "Yosemite Valley",
-    link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
-  },
-  {
-    name: "Lake Louise",
-    link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
-  },
-  {
-    name: "Bald Mountains",
-    link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
-  },
-  {
-    name: "Latemar",
-    link: "https://code.s3.yandex.net/web-code/latemar.jpg"
-  },
-  {
-    name: "Vanoise National Park",
-    link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
-  },
-  {
-    name: "Lago di Braies",
-    link: "https://code.s3.yandex.net/web-code/lago.jpg"
-  }
-]; 
-
 
 //functions
 function cardsCreation(name, link) {
@@ -136,6 +109,11 @@ function handleFormSubmit (evt){
 function togglePopup(modal) {
       //toggle-popups
     modal.classList.toggle('popup_open');
+    if(modal.classList.contains("popup_open")){
+      document.addEventListener("keydown", escRemove);
+    } else {
+      document.removeEventListener("keydown", escRemove);
+    }
 }
 
 function profileValues (){
@@ -147,18 +125,14 @@ function profileValues (){
 }
 
 function escRemove(evt){
-  const popupProfileRemove = document.querySelector(".popup_type_edit-profile");
-  const popupCardRemove = document.querySelector(".popup_type_create-card");
-  const popupFigureRemove = document.querySelector(".popup_type_figure-card");
 
   if(evt.key === "Escape") {
-    popupProfileRemove.classList.remove("popup_open");
-    popupCardRemove.classList.remove("popup_open");
-    popupFigureRemove.classList.remove("popup_open");
-    
+    const popupOpen = document.querySelector(".popup_open");
+    togglePopup(popupOpen);
   }
-   
 }
+
+
 
 //Events
 formCardElement.addEventListener("submit", addCardSubmit);
@@ -197,4 +171,4 @@ overlayPopupFigure.addEventListener("click", (evt) => {
   }
 });
 
-window.addEventListener("keydown", escRemove);
+
