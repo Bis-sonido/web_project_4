@@ -1,3 +1,7 @@
+//imports
+import FormValidator from "./FormValidator.js";
+import Card from "./Card.js";
+
 //buttons
 const editButton = document.querySelector(".edit");
 const addCardButton = document.querySelector(".add-button");
@@ -38,9 +42,24 @@ const cardUrlLink = document.querySelector(".field-about_type_url");
 const cardTemplate = document.querySelector(".card-template").content.querySelector(".element");
 const list = document.querySelector(".elements__cards");
 
+const config = {
+  formSelector: ".form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".form__submit-button",
+  inactiveButtonClass: "form__submit-button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible"
+}; 
+
+const profileFormValidator = new FormValidator({config}, document.querySelector(".form"));
+const cardFormValidator = new FormValidator({config}, document.querySelector(".form_type_card-input"));
+profileFormValidator.enableValidation();
+cardFormValidator.enableValidation();
+
+
 
 //functions
-function cardsCreation(name, link) {
+/*function cardsCreation(name, link) {
   const cardElement = cardTemplate.cloneNode(true);
 
   const cardImage = cardElement.querySelector(".element__images");
@@ -77,12 +96,14 @@ function cardsCreation(name, link) {
   });
 
   return cardElement;
-}
+}*/
+
 
 initialCards.forEach(data => {
   //initial-cards
-  const cardElement = cardsCreation(data.name, data.link);
-  list.prepend(cardElement);
+  const newCardsCreations = new Card(data, ".card-template");
+  //const cardElement = cardsCreation(data.name, data.link);
+  list.prepend(newCardsCreations.cardsCreation(data.name, data.link));
 });
 
 function addCardSubmit (evt) {
