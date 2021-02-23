@@ -3,6 +3,9 @@ const openFigureButton = document.querySelector(".popup_type_figure-card");
 const figureImage = openFigureButton.querySelector(".popup__figure-image");
 const figureTitle = openFigureButton.querySelector(".popup__figure-title");
 
+const cardCreateName = document.querySelector(".field-name_type_card-title");
+const cardUrlLink = document.querySelector(".field-about_type_url");
+
 function escRemove(evt){
 
   if(evt.key === "Escape") {

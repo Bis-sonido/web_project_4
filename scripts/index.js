@@ -43,7 +43,6 @@ const cardTemplate = document.querySelector(".card-template").content.querySelec
 const list = document.querySelector(".elements__cards");
 
 const config = {
-  formSelector: ".form",
   inputSelector: ".popup__input",
   submitButtonSelector: ".form__submit-button",
   inactiveButtonClass: "form__submit-button_disabled",
@@ -51,8 +50,8 @@ const config = {
   errorClass: "popup__error_visible"
 }; 
 
-const profileFormValidator = new FormValidator({config}, document.querySelector(".form"));
-const cardFormValidator = new FormValidator({config}, document.querySelector(".form_type_card-input"));
+const profileFormValidator = new FormValidator(config, document.querySelector(".form"));
+const cardFormValidator = new FormValidator(config, document.querySelector(".form_type_card-input"));
 profileFormValidator.enableValidation();
 cardFormValidator.enableValidation();
 
@@ -102,7 +101,6 @@ cardFormValidator.enableValidation();
 initialCards.forEach(data => {
   //initial-cards
   const newCardsCreations = new Card(data, ".card-template");
-  //const cardElement = cardsCreation(data.name, data.link);
   list.prepend(newCardsCreations.cardsCreation(data.name, data.link));
 });
 
