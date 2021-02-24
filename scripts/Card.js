@@ -52,9 +52,7 @@ class Card {
   
       cardDeleteButton.addEventListener("click", () => {
       //remove card
-      const removeCard = document.querySelector(".element");
-  
-      removeCard.remove();
+      this._cardElement.remove();
     });
   }
   cardsCreation() {
@@ -62,12 +60,12 @@ class Card {
     this._cardElement = cardTemplate.cloneNode(true);
 
     this._cardImage = this._cardElement.querySelector(".element__images");
-    const cardTitle = this._cardElement.querySelector(".group__title");
+    this._cardTitle = this._cardElement.querySelector(".group__title");
     const cardBox = this._cardElement.querySelector(".group");
     const cardGroupImage = this._cardElement.querySelector(".group__image");
     
 
-    cardTitle.textContent = this._data.name;
+    this._cardTitle.textContent = this._data.name;
     this._cardImage.src = this._data.link;
     this._cardImage.alt = this._data.name;
 

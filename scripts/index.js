@@ -58,57 +58,21 @@ cardFormValidator.enableValidation();
 
 
 //functions
-/*function cardsCreation(name, link) {
-  const cardElement = cardTemplate.cloneNode(true);
-
-  const cardImage = cardElement.querySelector(".element__images");
-  const cardTitle = cardElement.querySelector(".group__title");
-  const cardBox = cardElement.querySelector(".group");
-  const cardLikeButton = cardElement.querySelector(".group__button");
-  const cardGroupImage = cardElement.querySelector(".group__image");
-  const cardDeleteButton = cardElement.querySelector(".element__remove");
-
-  cardTitle.textContent = name;
-  cardImage.src = link;
-  cardImage.alt = name;
-
-  cardImage.addEventListener("click", () => {
-    //popup-figure-on-click
-    
-    figureImage.src = link;
-    figureTitle.textContent = name;
-
-    togglePopup(openFigureButton);
-  });
-
-  cardLikeButton.addEventListener("click", () => {
-    //toggle-like-on-card
-    cardLikeButton.classList.toggle("group__button_like");
-
-  });
-
-  cardDeleteButton.addEventListener("click", () => {
-    //remove card
-    const removeCard = document.querySelector(".element");
-
-    removeCard.remove();
-  });
-
-  return cardElement;
-}*/
-
-
 initialCards.forEach(data => {
   //initial-cards
-  const newCardsCreations = new Card(data, ".card-template");
-  list.prepend(newCardsCreations.cardsCreation(data.name, data.link));
+  list.prepend(cardsCreation(data));
 });
+
+function cardsCreation(data) {
+  const newCard = new Card(data, ".card-template");
+  return newCard.cardsCreation()
+}
+
 
 function addCardSubmit (evt) {
   //add-extra-form-card
   evt.preventDefault();
-  cardsCreation();
-  const formAdd = cardsCreation(cardCreateName.value, cardUrlLink.value);
+  const formAdd = cardsCreation({name: cardCreateName.value, link: cardUrlLink.value});
   list.prepend(formAdd);
   togglePopup(addCardPopup);
 }
