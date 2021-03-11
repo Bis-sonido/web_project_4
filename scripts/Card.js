@@ -25,9 +25,10 @@ function togglePopup(modal) {
 }
 
 class Card {
-  constructor(data, cardTemplateSelector) {
+  constructor({data, handleCardClick}, cardTemplateSelector) {
     this._data = data;
     this._cardTemplateSelector = cardTemplateSelector;
+    this._handleCardClick = handleCardClick;
   }
 
 
