@@ -6,7 +6,7 @@ class PopupWithImage extends Popup {
   }
   open(link, caption){
     this._popupElement.querySelector(".popup__figure-image").src = link;
-    this._popupElement.querySelector(".popup__figure-title").src = caption;
+    this._popupElement.querySelector(".popup__figure-title").textContent = caption;
     super.open();
   }
 }

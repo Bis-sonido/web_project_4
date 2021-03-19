@@ -4,7 +4,8 @@
   "description": "* [Link to project](https://bis-sonido.github.io/web_project_4/)\r ### Techologies",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && webpack",
+    "dev": "webpack serve --mode development"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,22 @@
   "bugs": {
     "url": "https://github.com/Bis-sonido/web_project_4/issues"
   },
-  "homepage": "https://github.com/Bis-sonido/web_project_4#readme"
+  "homepage": "https://github.com/Bis-sonido/web_project_4#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.2",
+    "cssnano": "^4.1.10",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.3.9",
+    "postcss-loader": "^5.1.0",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "core-js": "^3.9.1"
+  }
 }

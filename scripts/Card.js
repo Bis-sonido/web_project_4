@@ -1,49 +1,24 @@
-const openFigureButton = document.querySelector(".popup_type_figure-card");
-
-const figureImage = openFigureButton.querySelector(".popup__figure-image");
-const figureTitle = openFigureButton.querySelector(".popup__figure-title");
-
-const cardCreateName = document.querySelector(".field-name_type_card-title");
-const cardUrlLink = document.querySelector(".field-about_type_url");
-
-function escRemove(evt){
-
-  if(evt.key === "Escape") {
-    const popupOpen = document.querySelector(".popup_open");
-    togglePopup(popupOpen);
-  }
-}
-
-function togglePopup(modal) {
-    //toggle-popups
-  modal.classList.toggle('popup_open');
-  if(modal.classList.contains("popup_open")){
-    document.addEventListener("keydown", escRemove);
-  } else {
-    document.removeEventListener("keydown", escRemove);
-  }
-}
 
 class Card {
   constructor({data, handleCardClick}, cardTemplateSelector) {
-    this._data = data;
+    this._name = data.name;
+    this._link = data.link;
     this._cardTemplateSelector = cardTemplateSelector;
     this._handleCardClick = handleCardClick;
   }
-
-
   _setEventListeners() {
     const cardLikeButton = this._cardElement.querySelector(".group__button");
     const cardDeleteButton = this._cardElement.querySelector(".element__remove");
     
-    this._cardImage.addEventListener("click", () => {
-      //popup-figure-on-click
+    this._cardImage.addEventListener('click', () => {this._handleCardClick(this._name, this._link)});
+    // this._cardImage.addEventListener("click", () => {
+    //   //popup-figure-on-click
       
-      figureImage.src = this._data.link;
-      figureTitle.textContent = this._data.name;
+    //   figureImage.src = this._link;
+    //   figureTitle.textContent = this._name;
   
-      togglePopup(openFigureButton);
-    });
+    //   togglePopup(openFigureButton);
+    // });
   
       cardLikeButton.addEventListener("click", () => {
       //toggle-like-on-card
@@ -56,9 +31,13 @@ class Card {
       this._cardElement.remove();
     });
   }
-  cardsCreation() {
+  _getCardTemplate(){
     const cardTemplate = document.querySelector(this._cardTemplateSelector).content.querySelector(".element");
-    this._cardElement = cardTemplate.cloneNode(true);
+    return cardTemplate;
+  }
+
+  cardsCreation() {
+    this._cardElement = this._getCardTemplate().cloneNode(true);
 
     this._cardImage = this._cardElement.querySelector(".element__images");
     this._cardTitle = this._cardElement.querySelector(".group__title");
@@ -66,9 +45,9 @@ class Card {
     const cardGroupImage = this._cardElement.querySelector(".group__image");
     
 
-    this._cardTitle.textContent = this._data.name;
-    this._cardImage.src = this._data.link;
-    this._cardImage.alt = this._data.name;
+    this._cardTitle.textContent = this._name;
+    this._cardImage.src = this._link;
+    this._cardImage.alt = this._name;
 
     this._setEventListeners();
 

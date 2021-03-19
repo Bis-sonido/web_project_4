@@ -3,6 +3,7 @@ class Popup {
   constructor(popupSelector){
     this._popupElement = document.querySelector(popupSelector)
     this._handleEscClose = this._handleEscClose.bind(this)
+    this.close = this.close.bind(this);
   }
   open(){
     this._popupElement.classList.add('popup_open');
@@ -19,7 +20,7 @@ class Popup {
   }
   setEventListener(){
     this._popupElement.addEventListener("click", (e) =>{
-      if(e.target.classList.contains('close-icon') || e.target.closest.contains('popup__container')){
+      if(e.target.classList.contains('close-icon') || (e.target.classList.contains('popup'))){
         this.close();
       }
     });
