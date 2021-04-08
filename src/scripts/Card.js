@@ -10,7 +10,9 @@ class Card {
     const cardLikeButton = this._cardElement.querySelector(".group__button");
     const cardDeleteButton = this._cardElement.querySelector(".element__remove");
     
-    this._cardImage.addEventListener('click', () => {this._handleCardClick(this._name, this._link)});
+    this._cardImage.addEventListener('click', () => {
+      this._handleCardClick(this._name, this._link)
+    });
     // this._cardImage.addEventListener("click", () => {
     //   //popup-figure-on-click
       
@@ -32,12 +34,12 @@ class Card {
     });
   }
   _getCardTemplate(){
-    const cardTemplate = document.querySelector(this._cardTemplateSelector).content.querySelector(".element");
+    const cardTemplate = document.querySelector(this._cardTemplateSelector).content.querySelector(".element").cloneNode(true);
     return cardTemplate;
   }
 
   cardsCreation() {
-    this._cardElement = this._getCardTemplate().cloneNode(true);
+    this._cardElement = this._getCardTemplate();
 
     this._cardImage = this._cardElement.querySelector(".element__images");
     this._cardTitle = this._cardElement.querySelector(".group__title");

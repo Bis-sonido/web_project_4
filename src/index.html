@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Around The U.S</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <!-- <link rel="stylesheet" href="./pages/index.css"> -->
 </head>
 <body class="page">
   <header class="header">
-    <img src="images/Vector-logo.svg" alt="Vector-logo" class="header__vector">
+    <img src="<%=require('./images/Vector-logo.svg')%>" alt="Vector-logo" class="header__vector">
   </header>
   <main class="main">
     <section class="profile">
@@ -16,13 +16,13 @@
       <div class="profile-info">
         <h1 class="profile-info__title">Jacques Cousteau</h1>
         <button class="edit" type="button">
-          <img src="images/Vector-pen.svg" alt="pen" class="edit__image">
+          <img src="<%=require('./images/Vector-pen.svg')%>" alt="pen" class="edit__image">
         </button>
         <p class="profile-info__subtitle">Explorer</p>
         
       </div>
       <button class="add-button" type="button">
-        <img src="images/Vector.svg" alt="add-button" class="add-button__image">
+        <img src="<%=require('./images/Vector.svg')%>" alt="add-button" class="add-button__image">
       </button>
     </section>
     <section class="elements">
@@ -88,12 +88,12 @@
       <div class="group">
         <h2 class="group__title"></h2>
         <button class="group__button" type="button">
-          <img src="images/Vector-heart.png" alt="like" class="group__image">
+          <img src="<%=require('./images/Vector-heart.png')%>" alt="like" class="group__image">
         </button>
       </div>
     </li>
   </template>
-  <script src="./scripts/cards.js" defer></script>
-  <script type="module" src="./scripts/index.js" defer></script>
+  <!-- <script src="./scripts/cards.js" defer></script> -->
+  <!-- <script type="module" src="./scripts/index.js" defer></script> -->
 </body>
 </html>

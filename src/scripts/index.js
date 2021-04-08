@@ -1,4 +1,5 @@
 //imports
+import "../pages/index.css";
 
 import {
   editButton,
@@ -32,6 +33,32 @@ import PopupWithForm from "./PopupWithForm.js";
 import PopupWithImage from "./PopupWithImage.js";
 import UserInfo from "./UserInfo.js";
 
+const initialCards = [
+  {
+    name: "Yosemite Valley",
+    link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
+  },
+  {
+    name: "Lake Louise",
+    link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
+  },
+  {
+    name: "Bald Mountains",
+    link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
+  },
+  {
+    name: "Latemar",
+    link: "https://code.s3.yandex.net/web-code/latemar.jpg"
+  },
+  {
+    name: "Vanoise National Park",
+    link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
+  },
+  {
+    name: "Lago di Braies",
+    link: "https://code.s3.yandex.net/web-code/lago.jpg"
+  }
+]; 
 
 //instances
 const profileFormValidator = new FormValidator(config, document.querySelector(".form"));
@@ -49,8 +76,8 @@ const cardList = new Section ({
   renderer: (cardItem) => {
     const card = new Card({
       data: cardItem, 
-      handleCardClick: (name, link) => {
-        imagePopup.open(name, link);
+      handleCardClick: (link, caption) => {
+        imagePopup.open(link, caption);
       }}, ".card-template");
     const cardElement = card.cardsCreation();
 
@@ -67,9 +94,10 @@ imagePopup.setEventListener();
 const editCardPopup = new PopupWithForm({
   popupSelector: ".popup_type_create-card",
   handleFormSubmit: (items) => {
-    
-    const newCardElement = new Card({data: items, handleCardClick: (name, link) => { imagePopup.open(name, link);}}, '.card-template').cardsCreation();
-    cardList.addItem(newCardElement);
+    const newCardElement = new Card({data: items}, '.card-template')
+    const newCardAdded = newCardElement.cardsCreation();
+    //const newCardElement = new Card({data: items, handleCardClick: (name, link) => { imagePopup.open(name, link);}}, '.card-template').cardsCreation();
+    cardList.addItem(newCardAdded);
   }
 })
 

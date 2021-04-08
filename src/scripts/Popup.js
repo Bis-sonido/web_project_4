@@ -19,6 +19,11 @@ class Popup {
     }
   }
   setEventListener(){
+    // const closeButton = this._popupElement.querySelector(".close-icon");
+    //closeButton.addEventListener("click", e => {
+      //this.close();
+    //});
+    
     this._popupElement.addEventListener("click", (e) =>{
       if(e.target.classList.contains('close-icon') || (e.target.classList.contains('popup'))){
         this.close();
