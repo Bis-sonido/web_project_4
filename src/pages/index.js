@@ -24,14 +24,14 @@ import {
   list,
   config,
 
-} from "./utils/constants.js";
+} from "../scripts/utils/constants.js";
 
-import FormValidator from "./FormValidator.js";
-import Card from "./Card.js";
-import Section from "./Section.js";
-import PopupWithForm from "./PopupWithForm.js";
-import PopupWithImage from "./PopupWithImage.js";
-import UserInfo from "./UserInfo.js";
+import FormValidator from "../scripts/components/FormValidator.js";
+import Card from "../scripts/components/Card.js";
+import Section from "../scripts/components/Section.js";
+import PopupWithForm from "../scripts/components/PopupWithForm.js";
+import PopupWithImage from "../scripts/components/PopupWithImage.js";
+import UserInfo from "../scripts/components/UserInfo.js";
 
 const initialCards = [
   {
@@ -94,10 +94,9 @@ imagePopup.setEventListener();
 const editCardPopup = new PopupWithForm({
   popupSelector: ".popup_type_create-card",
   handleFormSubmit: (items) => {
-    const newCardElement = new Card({data: items}, '.card-template')
-    const newCardAdded = newCardElement.cardsCreation();
-    //const newCardElement = new Card({data: items, handleCardClick: (name, link) => { imagePopup.open(name, link);}}, '.card-template').cardsCreation();
-    cardList.addItem(newCardAdded);
+    
+    const newCardElement = new Card({data: items, handleCardClick: (name, link) => { imagePopup.open(name, link);}}, '.card-template').cardsCreation();
+    cardList.addItem(newCardElement);
   }
 })
 

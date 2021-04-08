@@ -1,4 +1,4 @@
-import {fieldName, fieldAbout} from "./utils/constants.js"
+
 
 class UserInfo {
   constructor({userName, userJob}) {
