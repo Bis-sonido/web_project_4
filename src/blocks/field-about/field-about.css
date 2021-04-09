@@ -17,7 +17,7 @@
 }
 .field-about:placeholder-shown{
   border-bottom: 1px solid black;
-  opacity: 20%;
+  opacity: 0.2;
 }
 @media screen and (min-width: 320px) and (max-width: 992px){
   .field-about{

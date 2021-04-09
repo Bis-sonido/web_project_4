@@ -7,7 +7,7 @@
 }
 .group__button:hover{
   cursor: pointer;
-  opacity: 50%;
+  opacity: 0.5;
 }
 .group__button:focus{
   outline: none;
