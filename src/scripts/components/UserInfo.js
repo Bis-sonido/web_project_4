@@ -1,4 +1,4 @@
-
+import {fieldName, fieldAbout} from "../utils/constants.js";
 
 class UserInfo {
   constructor({userName, userJob}) {
@@ -11,9 +11,12 @@ class UserInfo {
       job: this._userJob.textContent
     }
   }
-  setUserInfo(name, job){
-    this._userName.textContent = name;
-    this._userJob.textContent = job;
+  setUserInfo(){
+    this._userNameField = document.querySelector(".profile-info__title");
+    this._userJobField = document.querySelector(".profile-info__subtitle");
+
+    this._userNameField.innerText = fieldName.value;
+    this._userJobField.innerText = fieldAbout.value;
   }
 }
 

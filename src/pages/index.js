@@ -71,6 +71,7 @@ const userInfo = new UserInfo ({
   userJob: profileSubtitle,
 });
 
+
 const cardList = new Section ({
   items:initialCards,
   renderer: (cardItem) => {
@@ -98,7 +99,7 @@ const editCardPopup = new PopupWithForm({
     const newCardElement = new Card({data: items, handleCardClick: (name, link) => { imagePopup.open(name, link);}}, '.card-template').cardsCreation();
     cardList.addItem(newCardElement);
   }
-})
+});
 
 editCardPopup.setEventListener();
 addCardButton.addEventListener('click', () => {
@@ -107,10 +108,10 @@ addCardButton.addEventListener('click', () => {
 
 const editProfilePopup = new PopupWithForm ({
   popupSelector: ".popup_type_edit-profile",
-  handleFormSubmit: ({name, job}) => {
-    userInfo.setUserInfo(name, job);
+  handleFormSubmit: ({data}) => {
+    userInfo.setUserInfo(data);
   }
-})
+});
 
 editProfilePopup.setEventListener();
 editButton.addEventListener("click", () => {
