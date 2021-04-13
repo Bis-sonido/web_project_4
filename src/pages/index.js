@@ -98,7 +98,14 @@ const editCardPopup = new PopupWithForm({
   popupSelector: ".popup_type_create-card",
   handleFormSubmit: (items) => {
     
-    const newCardElement = new Card({data: items, handleCardClick: (items) => { imagePopup.open(items);}}, '.card-template').cardsCreation(items);
+    const newCardElement = new Card({
+      data: items, 
+      handleCardClick: (items) => { 
+        imagePopup.open(items);
+      }
+
+    }, '.card-template').cardsCreation(items);
+    
     cardList.addItem(newCardElement);
   }
 });
