@@ -92,11 +92,13 @@ cardList.renderItems();
 const imagePopup = new PopupWithImage('.popup_type_figure-card');
 imagePopup.setEventListener();
 
+
+
 const editCardPopup = new PopupWithForm({
   popupSelector: ".popup_type_create-card",
   handleFormSubmit: (items) => {
     
-    const newCardElement = new Card({data: items, handleCardClick: (name, link) => { imagePopup.open(name, link);}}, '.card-template').cardsCreation();
+    const newCardElement = new Card({data: items, handleCardClick: (items) => { imagePopup.open(items);}}, '.card-template').cardsCreation(items);
     cardList.addItem(newCardElement);
   }
 });

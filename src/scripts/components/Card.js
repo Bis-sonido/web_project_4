@@ -11,7 +11,7 @@ class Card {
     const cardDeleteButton = this._cardElement.querySelector(".element__remove");
     
     this._cardImage.addEventListener('click', () => {
-      this._handleCardClick(this._name, this._link)
+      this._handleCardClick(this._link, this._name)
     });
     // this._cardImage.addEventListener("click", () => {
     //   //popup-figure-on-click
