@@ -96,15 +96,9 @@ imagePopup.setEventListener();
 
 const editCardPopup = new PopupWithForm({
   popupSelector: ".popup_type_create-card",
-  handleFormSubmit: (items) => {
+  handleFormSubmit: ({about, name}) => {
     
-    const newCardElement = new Card({
-      data: items, 
-      handleCardClick: (items) => { 
-        imagePopup.open(items);
-      }
-
-    }, '.card-template').cardsCreation(items);
+    const newCardElement = new Card({data: {about, name}, handleCardClick: (name, link) => { imagePopup.open(name, link);}}, '.card-template').cardsCreation();
     
     cardList.addItem(newCardElement);
   }
