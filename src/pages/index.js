@@ -90,19 +90,20 @@ cardList.renderItems();
 
 
 const imagePopup = new PopupWithImage('.popup_type_figure-card');
-imagePopup.setEventListener();
+imagePopup.setEventListeners();
 
 
 
 const editCardPopup = new PopupWithForm({
   popupSelector: ".popup_type_create-card",
-  handleFormSubmit: ({about, name}) => {
+  handleFormSubmit: ({link, name}) => {
     
-    const newCardElement = new Card({data: {about, name}, handleCardClick: (name, link) => { imagePopup.open(name, link);}}, '.card-template').cardsCreation();
+    const newCardElement = new Card({data: {link, name}, handleCardClick: (link, name) => { imagePopup.open(link, name);}}, '.card-template')
+    const newCard = newCardElement.cardsCreation();
     
-    cardList.addItem(newCardElement);
+    cardList.addItem(newCard);
   }
-});
+}, '.elements__cards');
 
 editCardPopup.setEventListener();
 addCardButton.addEventListener('click', () => {

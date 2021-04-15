@@ -18,7 +18,7 @@ class Popup {
       this.close();
     }
   }
-  setEventListener(){
+  setEventListeners(){
     // const closeButton = this._popupElement.querySelector(".close-icon");
     //closeButton.addEventListener("click", e => {
       //this.close();
