@@ -1,3 +1,4 @@
+import { overlayPopupCard, overlayPopupEdit, addCardPopup, editProfileWindow} from "../utils/constants.js";
 
 class Popup {
   constructor(popupSelector){
@@ -18,17 +19,24 @@ class Popup {
       this.close();
     }
   }
-  setEventListeners(){
-    // const closeButton = this._popupElement.querySelector(".close-icon");
-    //closeButton.addEventListener("click", e => {
-      //this.close();
-    //});
-    
-    this._popupElement.addEventListener("click", (e) =>{
-      if(e.target.classList.contains('close-icon') || (e.target.classList.contains('popup'))){
-        this.close();
-      }
+  setEventListener(){
+    const closeButton = this._popupElement.querySelector(".close-icon");
+    const outsideCloseButton = Array.from(document.querySelectorAll(".popup"));
+
+    closeButton.addEventListener("click", e => {
+      this.close();
     });
+    outsideCloseButton.forEach((pop) => {
+      pop.addEventListener("click", e => {
+        this.close();
+      })
+    })
+  
+    // this._popupElement.addEventListener("click", (e) =>{
+    //   if(e.target.classList.contains('close-icon') || (e.target.classList.contains('popup'))){
+    //     this.close();
+    //   }
+    // });
   }
 }
 

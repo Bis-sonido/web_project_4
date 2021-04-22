@@ -7,7 +7,7 @@
 @import url(./__figure-title/popup__figure-title.css);
 
 .popup{
-  z-index: 2;
+  z-index: 1;
   display: flex;
   background: rgba(0, 0, 0, 0.5);
   width: 100%;

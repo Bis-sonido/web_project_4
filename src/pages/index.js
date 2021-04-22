@@ -90,9 +90,22 @@ cardList.renderItems();
 
 
 const imagePopup = new PopupWithImage('.popup_type_figure-card');
-imagePopup.setEventListeners();
+imagePopup.setEventListener();
 
+const editProfilePopup = new PopupWithForm ({
+  popupSelector: ".popup_type_edit-profile",
+  handleFormSubmit: ({data}) => {
+    userInfo.setUserInfo(data);
+  }
+});
 
+editProfilePopup.setEventListener();
+editButton.addEventListener("click", () => {
+  editProfilePopup.open();
+  fieldName.value = userInfo.getUserInfo().name;
+  fieldAbout.value = userInfo.getUserInfo().job;
+  
+});
 
 const editCardPopup = new PopupWithForm({
   popupSelector: ".popup_type_create-card",
@@ -108,21 +121,6 @@ const editCardPopup = new PopupWithForm({
 editCardPopup.setEventListener();
 addCardButton.addEventListener('click', () => {
   editCardPopup.open();
-});
-
-const editProfilePopup = new PopupWithForm ({
-  popupSelector: ".popup_type_edit-profile",
-  handleFormSubmit: ({data}) => {
-    userInfo.setUserInfo(data);
-  }
-});
-
-editProfilePopup.setEventListener();
-editButton.addEventListener("click", () => {
-  editProfilePopup.open();
-  fieldName.value = userInfo.getUserInfo().name;
-  fieldAbout.value = userInfo.getUserInfo().job;
-  
 });
 
 
