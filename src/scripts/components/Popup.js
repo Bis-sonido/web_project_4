@@ -19,18 +19,23 @@ class Popup {
       this.close();
     }
   }
+  //const overlayPopupCard = document.querySelector(".popup_overlay-card");
   setEventListener(){
     const closeButton = this._popupElement.querySelector(".close-icon");
-    const outsideCloseButton = Array.from(document.querySelectorAll(".popup"));
+    //const outsideCloseButton = Array.from(document.querySelectorAll(".popup"));
 
     closeButton.addEventListener("click", e => {
       this.close();
     });
-    outsideCloseButton.forEach((pop) => {
-      pop.addEventListener("click", e => {
-        this.close();
-      })
+
+    overlayPopupCard.addEventListener("click", e => {
+      this.close();
     })
+    // outsideCloseButton.forEach((pop) => {
+    //   pop.addEventListener("click", e => {
+    //     this.close();
+    //   })
+    // })
   
     // this._popupElement.addEventListener("click", (e) =>{
     //   if(e.target.classList.contains('close-icon') || (e.target.classList.contains('popup'))){
